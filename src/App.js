@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import { useState } from "react";
+import Crud from "./components/Crud";
 
 function App() {
+let [users , setUsers]=useState([
+  {
+name:"shama",
+age:45,
+address:"abc",
+quali:"cse"
+},
+{
+  name:"shama",
+age:45,
+address:"abc",
+quali:"cse"
+},
+{
+  name:"shama",
+age:45,
+address:"abc",
+quali:"cse"
+},
+{
+  name:"shama",
+age:45,
+address:"abc",
+quali:"cse"
+},
+{
+  name:"shama",
+age:45,
+address:"abc",
+quali:"cse"
+}
+])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+
+<Crud users={users} setUsers={setUsers}/>
+  </div>
+  )
+
+   
+  
 }
 
 export default App;
